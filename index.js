@@ -1,3 +1,10 @@
+/*
+    Title: JWT-Auth
+    Description: We will verify a user by using token and give access to perform certain events in this system.
+    Author: Md.Sakib Al Emran
+    Date: 04/11/2021
+*/
+
 //dependencies
 const express = require('express');
 const mongoose = require('mongoose');
