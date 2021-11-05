@@ -6,7 +6,7 @@ JWT is one of the most popular authorization procedure to confirm a user identit
 You should have NodeJs, ExpressJs and MongoDB installed in your local machine.
 
 ## Database Schema
-We have user & movie schema. There is one to one way communication in movie to user schema. movie schema stores a reference user for a new records.
+We have a user & a movie schema. There is one to one way communication in movie to user schema. movie schema stores a reference user for a new records.
 
 ## How to run the project
 1. Open the terminal
@@ -19,7 +19,27 @@ git clone https://github.com/SakibAlEmran/JWT-Authorization.git
 ```
 cd JWT-Authorization/
 ```
-4. Install Dependencies: we need to install npm bcrypt, dotenv, jsonwebtoken, mongoose packages.
+4. Install Dependencies: we need to install npm bcrypt, dotenv, jsonwebtoken, mongoose, nodemon packages.
 ```
-npm install bcrypt dotenv jsonwebtoken mongoose
+npm install bcrypt dotenv jsonwebtoken mongoose nodemon
 ```
+5. Start the MongoDb database server
+```
+sudo systemctl start mongod
+```
+6. Check the MongoDb database server status
+```
+sudo systemctl status mongod
+```
+7. Start the server
+```
+nodemon index.js
+```
+8. Use POSTMAN as a client to check the endpoints, make sure proper request methods
+i.  Register a user first: http://localhost:3000/user/signup
+ii. login into the system: http://localhost:3000/user/login
+iii. After the login, You will get a token as a response.
+iv. use the token in headers section, now create movie description from:  http://localhost:3000/check/insert
+v. get the data from: http://localhost:3000/check/list
+
+9. Yo can download the Mongo Compass to view your Database with UI.
