@@ -35,11 +35,6 @@ sudo systemctl status mongod
 ```
 nodemon index.js
 ```
-8. Use POSTMAN as a client to check the endpoints, make sure proper request methods
-i.  Register a user first: http://localhost:3000/user/signup
-ii. login into the system: http://localhost:3000/user/login
-iii. After the login, You will get a token as a response.
-iv. use the token in headers section, now create movie description from:  http://localhost:3000/check/insert
-v. get the data from: http://localhost:3000/check/list
+8. Use POSTMAN as a client to check the endpoints, make sure proper request methods and proper data for a particular request.
 
 9. Yo can download the Mongo Compass to view your Database with UI.
